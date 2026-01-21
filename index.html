@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JamSeed – Tiny Ideas. Big Songs.</title>
+
   <meta name="description" content="JamSeed helps musicians turn small ideas into complete songs with smart templates, chord progressions, and AI-powered inspiration." />
 
   <style>
@@ -23,8 +24,9 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: radial-gradient(circle at top, #111 0%, #000 45%);
       color: var(--text);
       line-height: 1.5;
     }
@@ -46,44 +48,56 @@
 
     header {
       text-align: center;
-      margin-bottom: 56px;
+      margin-bottom: 64px;
     }
 
+    /* === LOGO === */
     .logo {
-      font-size: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-size: 38px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      height: 44px;
+      width: auto;
     }
 
     .tagline {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .subtagline {
       color: var(--muted);
       font-size: 16px;
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
     }
 
+    /* === CTA BUTTONS === */
     .cta {
       display: flex;
       justify-content: center;
       gap: 16px;
-      margin-top: 32px;
+      margin-top: 36px;
       flex-wrap: wrap;
     }
 
     .button {
       background: var(--gold);
       color: #000;
-      padding: 14px 22px;
-      border-radius: 10px;
+      padding: 14px 24px;
+      border-radius: 12px;
       font-weight: 600;
-      min-width: 200px;
+      min-width: 210px;
       text-align: center;
+      transition: background 0.2s ease, transform 0.1s ease;
     }
 
     .button.secondary {
@@ -96,25 +110,27 @@
       background: var(--gold-hover);
       color: #000;
       text-decoration: none;
+      transform: translateY(-1px);
     }
 
+    /* === FEATURES === */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
-      margin-top: 64px;
+      margin-top: 72px;
     }
 
     .feature {
-      background: var(--card);
+      background: linear-gradient(180deg, #161616, #0f0f0f);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 22px;
     }
 
     .feature h3 {
       margin-top: 0;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-size: 18px;
     }
 
@@ -124,17 +140,32 @@
       font-size: 14px;
     }
 
+    /* === FOOTER === */
     footer {
       border-top: 1px solid var(--border);
-      margin-top: 80px;
-      padding-top: 24px;
+      margin-top: 88px;
+      padding-top: 26px;
       text-align: center;
       font-size: 14px;
       color: var(--muted);
     }
 
     footer a {
-      margin: 0 10px;
+      margin: 0 12px;
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 32px;
+      }
+
+      .logo-icon {
+        height: 38px;
+      }
+
+      .tagline {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -142,11 +173,16 @@
 <body>
   <main class="container">
     <header>
-      <div class="logo">🎵 JamSeed</div>
+      <div class="logo">
+        <img src="icon.png" alt="JamSeed logo" class="logo-icon" />
+        <span>JamSeed</span>
+      </div>
+
       <div class="tagline">Tiny Ideas. Big Songs.</div>
+
       <p class="subtagline">
-        Collect sparks, build songs, and turn inspiration into finished music with smart templates,
-        chord progressions, and AI-powered suggestions.
+        Collect sparks, build songs, and turn inspiration into finished music
+        with smart templates, chord progressions, and AI-powered suggestions.
       </p>
 
       <div class="cta">
@@ -162,35 +198,38 @@
       <div class="feature">
         <h3>Personalized Templates</h3>
         <p>
-          Song structures tailored to your skill level and genre preferences so you never start from a blank page.
+          Song structures tailored to your skill level and genre preferences so
+          you never start from a blank page.
         </p>
       </div>
 
       <div class="feature">
         <h3>Chord Progressions</h3>
         <p>
-          Explore proven progressions across pop, rock, blues, country, and more—ready to drop into your song.
+          Explore proven progressions across pop, rock, blues, country, and
+          more—ready to drop into your song.
         </p>
       </div>
 
       <div class="feature">
         <h3>AI-Powered Inspiration</h3>
         <p>
-          Generate lyric ideas and creative prompts when you’re stuck, without losing your unique voice.
+          Generate lyric ideas and creative prompts when you’re stuck, without
+          losing your unique voice.
         </p>
       </div>
 
       <div class="feature">
         <h3>Song Canvas</h3>
         <p>
-          Organize verses, choruses, and ideas visually and evolve them into complete, finished songs.
+          Organize verses, choruses, and ideas visually and evolve them into
+          complete, finished songs.
         </p>
       </div>
     </section>
 
     <footer>
       <div>
-        <!-- These must be public URLs for App Store / Play compliance -->
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms of Service</a>
       </div>
